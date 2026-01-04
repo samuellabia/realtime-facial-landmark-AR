@@ -1,4 +1,10 @@
 import cv2
+import mediapipe as mp
+
+# Initialisation Mediapipe Face Mesh
+mp_face_mesh = mp.solutions.face_mesh  # usage du module de détection de visage
+face_mesh = mp_face_mesh.FaceMesh(max_num_faces=1)  # création du détecteur pour un visage.
+
 
 # Ouvre la webcam
 cap = cv2.VideoCapture(0) #0 pour caméra principale
